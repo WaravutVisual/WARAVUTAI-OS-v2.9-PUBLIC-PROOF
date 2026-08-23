@@ -1,0 +1,27 @@
+{
+  "cert": "GATE-8 FROZEN",
+  "gate": "GATE-8",
+  "status": "GREEN",
+  "contract": "GATE-8 CONTRACT v0.1 FINAL",
+  "baseline_commit": "025668a48793011232e6db2a203378ca3f191b20",
+  "evidence_commit": "bfc56f415d39e24709e61465de4be41e77e7e2da",
+  "oracle": "PUBLIC JAVASCRIPT ASSET DELIVERY VERIFICATION",
+  "tests": [
+    "TEST-001",
+    "TEST-002",
+    "TEST-003"
+  ],
+  "overall_result": "PASS",
+  "asset": {
+    "path": "assets/index-zVo_hkyZ.js",
+    "bytes": 143730,
+    "sha256": "3ce12333ad62086c4f88d45728c83bac4b41d6dd698168fa1e2e802613c4d2ea"
+  },
+  "claim_boundary": {
+    "production_verified": false,
+    "javascript_execution_verified": false,
+    "backend_verified": false,
+    "ai_runtime_verified": false
+  },
+  "frozen_at": "2026-08-23"
+}
