@@ -1,0 +1,22 @@
+{
+  "cert": "GATE-7 FROZEN",
+  "gate": "GATE-7",
+  "status": "GREEN",
+  "contract": "GATE-7 CONTRACT v0.1 FINAL",
+  "baseline_commit": "35010550dab39901024e1c4417e99e0c03f9b6a5",
+  "evidence_commit": "e0db39fa8a5c70e1599cb9084e484e79ca89f817",
+  "oracle": "PUBLIC HTML SHELL VERIFICATION",
+  "tests": [
+    "TEST-001",
+    "TEST-002",
+    "TEST-003"
+  ],
+  "overall_result": "PASS",
+  "claim_boundary": {
+    "production_verified": false,
+    "javascript_execution_verified": false,
+    "backend_verified": false,
+    "ai_runtime_verified": false
+  },
+  "frozen_at": "2026-08-23"
+}
