@@ -1,0 +1,44 @@
+{
+  "gate": "GATE-7",
+  "contract": "GATE-7 CONTRACT v0.1 FINAL",
+  "baseline_commit": "35010550dab39901024e1c4417e99e0c03f9b6a5",
+  "oracle": "PUBLIC HTML SHELL VERIFICATION",
+  "scope": {
+    "public_url": "https://waravutvisual.github.io/WARAVUTAI-OS-v2.9-PUBLIC-PROOF/"
+  },
+  "tests": [
+    {
+      "test_id": "TEST-001",
+      "assertion": "public deployment URL resolves",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "size_bytes": 261,
+      "curl_exit_code": 0,
+      "result": "PASS"
+    },
+    {
+      "test_id": "TEST-002",
+      "assertion": "public response contains HTML doctype",
+      "doctype": "FOUND",
+      "curl_exit_code": 0,
+      "result": "PASS"
+    },
+    {
+      "test_id": "TEST-003",
+      "assertion": "public HTML contains root mount and declared JavaScript reference",
+      "root_markup": "<div id=\"root\"></div>",
+      "root_markup_exit_code": 0,
+      "script_reference": "./assets/index-zVo_hkyZ.js",
+      "script_reference_exit_code": 0,
+      "result": "PASS"
+    }
+  ],
+  "overall_result": "PASS",
+  "claim_boundary": {
+    "production_verified": false,
+    "javascript_execution_verified": false,
+    "backend_verified": false,
+    "ai_runtime_verified": false
+  },
+  "evidence_date": "2026-08-23"
+}
