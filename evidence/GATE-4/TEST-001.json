@@ -1,0 +1,18 @@
+{
+  "gate": "GATE-4",
+  "test_id": "TEST-001",
+  "test_name": "Declared Artifact SHA-256 Integrity",
+  "baseline_tag": "v2.9-gate2-frozen",
+  "baseline_commit": "c14f64eb310c2691c83c9116c5b431aae1d9ef04",
+  "declared_artifact": "WARAVUTAI-PUBLIC-PROOF-FULL-REAL (1).zip",
+  "verification_command": "sha256sum -c SHA256SUMS.txt",
+  "expected": {
+    "verification": "OK",
+    "exit_code": 0
+  },
+  "observed": {
+    "verification": "OK",
+    "exit_code": 0
+  },
+  "result": "PASS"
+}
