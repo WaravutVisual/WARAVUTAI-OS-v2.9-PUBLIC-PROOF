@@ -1,0 +1,22 @@
+{
+  "cert": "GATE-5 FROZEN",
+  "gate": "GATE-5",
+  "status": "GREEN",
+  "contract": "GATE-5 CONTRACT v0.1 FINAL",
+  "baseline_commit": "f7718d35cb068808350ba93191a4a088ee57765a",
+  "evidence_commit": "76c83d36ca5f51ca8d4e497fded7a67e28deecd8",
+  "oracle": "PUBLIC PROOF DEPLOYMENT VERIFICATION",
+  "tests": [
+    "TEST-001",
+    "TEST-002",
+    "TEST-003"
+  ],
+  "overall_result": "PASS",
+  "claim_boundary": {
+    "production_verified": false,
+    "javascript_execution_verified": false,
+    "backend_verified": false,
+    "ai_runtime_verified": false
+  },
+  "frozen_at": "2026-08-23"
+}
