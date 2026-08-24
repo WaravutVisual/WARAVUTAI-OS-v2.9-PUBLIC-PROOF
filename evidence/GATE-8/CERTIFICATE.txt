@@ -1,0 +1,34 @@
+GATE-8 BROWSER RUNTIME EXECUTION CERTIFICATE
+
+Status: PASS
+
+Public URL:
+https://waravutvisual.github.io/WARAVUTAI-OS-v2.9-PUBLIC-PROOF/
+
+Runtime:
+GitHub Actions ubuntu-latest
+
+Browser:
+Chromium
+
+Execution:
+JavaScript execution observed
+
+HTTP:
+200
+
+DOM:
+#root exists
+root_html_length > 0
+body_text_length > 0
+
+Errors:
+console_errors = []
+page_errors = []
+request_failures = []
+
+Evidence:
+runtime-result.json
+
+This certificate is derived from the GATE-8 GitHub Actions
+browser execution evidence and is not based on screenshot inspection.
