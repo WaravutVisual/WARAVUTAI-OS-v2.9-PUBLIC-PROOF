@@ -1,0 +1,48 @@
+G23-001 | ARTIFACT IDENTITY RECORD
+
+Artifact:
+./E \\
+
+Size:
+17182 bytes
+
+SHA-256:
+779381a9d9da4eae2f1f18acd6f4ea8c7c29d52b4bec2ca7b73fc9ef8bcc15e8
+
+Content Identity:
+"SUMMARY OF LESS COMMANDS"
+
+Observed Content:
+less pager command reference/help text
+
+Git Tracking:
+UNTRACKED
+
+git ls-files:
+EMPTY
+
+git status:
+?? "E \\"
+
+Provenance:
+UNKNOWN
+
+License:
+UNKNOWN / REVIEW
+
+Authorship:
+NOT ESTABLISHED
+
+Preliminary Classification:
+EXTERNAL / INCIDENTAL
+
+Decision:
+DO NOT CLAIM ORIGINAL
+
+G23-001 STATUS:
+VERIFIED: UNTRACKED INCIDENTAL ARTIFACT IDENTIFIED
+
+Important:
+UNTRACKED does not establish external provenance.
+Content identification does not establish authorship.
+UNKNOWN provenance does not by itself establish LICENSE REQUIRED.
