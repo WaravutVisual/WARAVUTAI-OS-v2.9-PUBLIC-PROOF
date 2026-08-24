@@ -1,0 +1,42 @@
+G23-001 | CLEANUP DECISION RECORD
+
+Artifact:
+./E \\
+
+Size:
+17182 bytes
+
+SHA-256:
+779381a9d9da4eae2f1f18acd6f4ea8c7c29d52b4bec2ca7b73fc9ef8bcc15e8
+
+Observed content:
+LESS command reference/help text
+
+Git tracking:
+UNTRACKED
+
+Provenance:
+UNKNOWN
+
+License:
+UNKNOWN / REVIEW
+
+Authorship:
+NOT ESTABLISHED
+
+Decision:
+REMOVE FROM WORKING TREE AFTER HISTORICAL
+IDENTITY RECORD HAS BEEN COMMITTED.
+
+Historical audit record:
+evidence/G23/G23-001-ARTIFACT-IDENTITY.txt
+
+Audit record commit:
+aa3771e
+
+Important:
+Removal from the working tree does not establish provenance,
+authorship, third-party origin, or license status.
+
+CLAIM AS ORIGINAL:
+NO
