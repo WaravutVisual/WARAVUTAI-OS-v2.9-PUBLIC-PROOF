@@ -1,0 +1,118 @@
+name: GATE-8 Browser Execution
+
+on:
+  workflow_dispatch:
+
+jobs:
+  gate8:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install Playwright
+        run: |
+          npm init -y
+          npm install playwright@1.62.1
+          npx playwright install --with-deps chromium
+
+      - name: Execute Public Runtime
+        run: |
+          node <<'NODE'
+          const { chromium } = require("playwright");
+          const fs = require("fs");
+
+          (async () => {
+            const url =
+              "https://waravutvisual.github.io/WARAVUTAI-OS-v2.9-PUBLIC-PROOF/";
+
+            const browser = await chromium.launch({ headless: true });
+            const page = await browser.newPage();
+
+            const consoleErrors = [];
+            const pageErrors = [];
+            const requestFailures = [];
+
+            page.on("console", msg => {
+              if (msg.type() === "error") {
+                consoleErrors.push(msg.text());
+              }
+            });
+
+            page.on("pageerror", err => {
+              pageErrors.push(String(err));
+            });
+
+            page.on("requestfailed", req => {
+              requestFailures.push({
+                url: req.url(),
+                failure: req.failure()?.errorText || null
+              });
+            });
+
+            const response = await page.goto(url, {
+              waitUntil: "networkidle",
+              timeout: 60000
+            });
+
+            await page.waitForTimeout(3000);
+
+            const result = {
+              gate: "GATE-8",
+              url,
+              http_status: response ? response.status() : null,
+              title: await page.title(),
+              root_exists: await page.locator("#root").count() > 0,
+              root_html_length:
+                await page.locator("#root").innerHTML().then(x => x.length),
+              body_text_length:
+                await page.locator("body").innerText().then(x => x.length),
+              console_errors: consoleErrors,
+              page_errors: pageErrors,
+              request_failures: requestFailures,
+              javascript_execution_observed: true,
+              browser: "Chromium",
+              runtime: "GitHub Actions ubuntu-latest",
+              timestamp: new Date().toISOString()
+            };
+
+            fs.mkdirSync("gate8-evidence", { recursive: true });
+
+            fs.writeFileSync(
+              "gate8-evidence/runtime-result.json",
+              JSON.stringify(result, null, 2)
+            );
+
+            console.log(JSON.stringify(result, null, 2));
+
+            await browser.close();
+
+            if (
+              result.http_status !== 200 ||
+              !result.root_exists ||
+              result.root_html_length === 0 ||
+              result.body_text_length === 0 ||
+              result.page_errors.length > 0 ||
+              result.console_errors.length > 0 ||
+              result.request_failures.length > 0
+            ) {
+              process.exit(1);
+            }
+          })().catch(err => {
+            console.error(err);
+            process.exit(1);
+          });
+          NODE
+
+      - name: Upload GATE-8 Evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gate8-browser-evidence
+          path: gate8-evidence/
