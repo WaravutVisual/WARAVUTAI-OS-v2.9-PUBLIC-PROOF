@@ -1,0 +1,28 @@
+G23-002 FINAL
+      │
+      ├── Evidence              🔒 FROZEN
+      ├── Manifest              🔒 FROZEN
+      └── Public Discovery      🔒 FROZEN
+                 │
+                 ▼
+              PUBLISH
+                 │
+                 ▼
+          PUBLIC URL / REPO
+                 │
+                 ▼
+          GOOGLE DISCOVERY 🔎
+
+CLAIM BOUNDARY
+────────────────────────────────
+SOURCE ORIGIN = NOT ESTABLISHED
+OWNERSHIP     = NOT ESTABLISHED
+AUTHORSHIP    = NOT ESTABLISHED
+ORIGINAL      = FALSE
+
+RULE
+────────────────────────────────
+VERIFIED ≠ ORIGINAL
+VERIFIED ≠ OWNERSHIP
+VERIFIED ≠ AUTHORSHIP
+GOOGLE DISCOVERY ≠ ORIGINALITY
